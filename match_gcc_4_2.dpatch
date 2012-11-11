@@ -1,0 +1,19 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## match_gcc_4_2.dpatch by Sylvain Le Gall <gildor@debian.org>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad ocamlgsl-0.6.0~/Makefile ocamlgsl-0.6.0/Makefile
+--- ocamlgsl-0.6.0~/Makefile	2008-05-26 12:12:17.000000000 +0200
++++ ocamlgsl-0.6.0/Makefile	2008-05-26 12:12:26.000000000 +0200
+@@ -21,7 +21,7 @@
+ OCAML_BACKEND := mingw
+ endif
+ 
+-OCAML_BACKEND ?= $(shell $(OCAMLC) -verbose foo.c 2>&1 | $(AWK) "NR==1 { print \$$2 }")
++OCAML_BACKEND ?= $(shell $(OCAMLC) -verbose foo.c 2>&1 | $(AWK) "NR==1 && /\+ gcc-.*/ { print \"gcc\"; next; } NR==1 { print \$$2 }")
+ OCAML_VERSION ?= $(shell $(OCAMLC) -version)
+ 
+ OCAMLBCFLAGS := -g 

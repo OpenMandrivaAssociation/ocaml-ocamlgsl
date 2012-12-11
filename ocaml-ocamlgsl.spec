@@ -82,3 +82,16 @@ rm -rf %{buildroot}
 %{_libdir}/ocaml/gsl/*.cmx
 %{_libdir}/ocaml/gsl/*.mli
 
+
+
+%changelog
+* Sun Jun 28 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.6.0-2mdv2010.0
++ Revision: 390298
+- rebuild
+
+* Tue Feb 03 2009 Florent Monnier <blue_prawn@mandriva.org> 0.6.0-1mdv2009.1
++ Revision: 337081
+- Initial RPM release made from the fedora rpm .spec file (revision 1.4) by Richard W.M. Jones
+- Also imported a patch from debian
+
+

@@ -2,7 +2,7 @@
 
 Name:           ocaml-%{up_name}
 Version:        0.6.0
-Release:        %mkrel 2
+Release:        3
 Summary:        GNU Scientific Library (GSL) for OCaml
 License:        GPL
 Group:          Development/Other
@@ -10,7 +10,6 @@ URL:            http://oandrieu.nerim.net/ocaml/gsl/
 Source0:        http://oandrieu.nerim.net/ocaml/gsl/%{up_name}-%{version}.tar.gz
 #Patch0:        cdf_handle_int_arguments.dpatch
 Patch1:         match_gcc_4_2.dpatch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  ocaml
 BuildRequires:  libgsl-devel >= 1.9
 BuildRequires:  ocaml-findlib
@@ -52,17 +51,6 @@ install -m 0644 *.mli %{buildroot}%{_libdir}/ocaml/gsl/
 # info files
 mkdir -p %{buildroot}%{_infodir}
 install -m 644 ocamlgsl.info* %{buildroot}%{_infodir}
-
-%clean
-rm -rf %{buildroot}
-
-
-%post devel
-/sbin/install-info %{_infodir}/ocamlgsl.info %{_infodir}/dir
-
-%postun devel
-/sbin/install-info --delete ocamlgsl %{_infodir}/dir
-
 
 %files
 %defattr(-,root,root)

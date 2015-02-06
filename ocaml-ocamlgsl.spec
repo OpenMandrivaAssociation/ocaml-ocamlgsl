@@ -2,7 +2,7 @@
 
 Name:           ocaml-%{up_name}
 Version:        0.6.0
-Release:        3
+Release:        4
 Summary:        GNU Scientific Library (GSL) for OCaml
 License:        GPL
 Group:          Development/Other

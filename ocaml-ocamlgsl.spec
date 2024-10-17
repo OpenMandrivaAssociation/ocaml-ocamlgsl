@@ -6,7 +6,7 @@ Release:        4
 Summary:        GNU Scientific Library (GSL) for OCaml
 License:        GPL
 Group:          Development/Other
-URL:            http://oandrieu.nerim.net/ocaml/gsl/
+URL:            https://oandrieu.nerim.net/ocaml/gsl/
 Source0:        http://oandrieu.nerim.net/ocaml/gsl/%{up_name}-%{version}.tar.gz
 #Patch0:        cdf_handle_int_arguments.dpatch
 Patch1:         match_gcc_4_2.dpatch

@@ -10,6 +10,7 @@ URL:            https://oandrieu.nerim.net/ocaml/gsl/
 Source0:        http://oandrieu.nerim.net/ocaml/gsl/%{up_name}-%{version}.tar.gz
 #Patch0:        cdf_handle_int_arguments.dpatch
 Patch1:         match_gcc_4_2.dpatch
+BuildRequires:	make
 BuildRequires:  ocaml
 BuildRequires:  libgsl-devel >= 1.9
 BuildRequires:  ocaml-findlib
